@@ -674,7 +674,7 @@ CLI
 
 # 👨‍💻 Author
 
-## Ujwal Khairnar
+## Aswad Gorivale
 
 **Cloud / DevOps Enthusiast**
 

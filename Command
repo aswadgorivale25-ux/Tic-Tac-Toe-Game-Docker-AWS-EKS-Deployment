@@ -1,0 +1,43 @@
+docker build -t ujwals-tic-tac-toe-game:v1 . 
+
+ docker images
+
+docker run -itd --name cont1 -p 80:80 f5fdac8c1bea
+
+ docker tag ujwals-tic-tac-toe-game:v1 tinu10/ujwals-tic-tac-toe-game:v1
+
+ docker login -u tinu10
+
+ docker push tinu10/ujwals-tic-tac-toe-game:v1
+
+go to aws create iam user admin acces acces key and secret key
+
+aws cli
+
+Open PowerShell as Administrator
+
+choco install eksctl
+
+choco install kubernetes-cli
+
+aws --version
+eksctl version
+kubectl version --client
+docker --version
+eksctl create cluster --name game-cluster --region ap-south-1 --nodegroup-name game-nodes --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 3
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl apply -f service.yaml
+kubectl get svc
+NAME                   TYPE           EXTERNAL-IP
+tic-tac-toe-service    LoadBalancer   xxxxx.ap-south-1.elb.amazonaws.com
+kubectl get nodes
+kubectl get pods
+kubectl get deployments
+kubectl get svc
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+kubectl scale deployment tic-tac-toe --replicas=5
+kubectl delete -f deployment.yaml
+kubectl delete -f service.yaml
+eksctl delete cluster --name game-cluster --region ap-south-1

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tic-tac-toe
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: tic-tac-toe
+
+  template:
+    metadata:
+      labels:
+        app: tic-tac-toe
+
+    spec:
+      containers:
+        - name: game
+          image: tinu10/ujwals-tic-tac-toe-game:v1
+
+          ports:
+            - containerPort: 80
